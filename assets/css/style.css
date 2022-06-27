@@ -1,0 +1,929 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Teko:wght@300;400;500;600;700&display=swap');
+
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* RESET CSS FIM*/
+
+/* ROOOT */
+
+:root{
+    --primary: #04e5e5;
+}
+
+
+/*NAVBAR CSS */
+
+.fixed-nav{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container{
+    display: flex;
+    position: relative;
+    @media (max-width: 500px) {
+        display: block;
+        padding: 0;
+    }
+}
+
+.nav-text{
+    color: white;
+    transition: all 0.5s ;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.nav-text:hover{
+    color: var(--primary);
+}
+
+.navlogo{
+    margin-top: 5px;
+}
+
+.nav-active{
+    position: fixed;
+    background-color: rgba(0,0,0,.8) ;
+    padding: 0 0;
+}
+
+
+
+/*NAVBAR CSS FIM*/
+
+/* HERO CSS */
+
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:  url(../imgs/bg1.jpg);
+}
+
+.hero-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-sup{
+    font-family: 'Teko',sans-serif;
+    position: relative;
+    color: white;
+    margin-top: 45%;
+    transform: translateY(-100%);
+}
+
+.hero-sup h1{
+    font-size: 80px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.hero-sup h2{
+    font-family: 'Poppins';
+    font-size: 120px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(left, #00ffff , #007a7a);
+    background: -o-linear-gradient(right, #00ffff, #007a7a);
+    background: -moz-linear-gradient(right, #00ffff, #007a7a);
+    background: linear-gradient(to right, #00ffff , #007a7a); 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.separador{
+    height: 5px;
+    width: 50px;
+    background-color: #04e5e5;
+    margin-bottom: 30px;
+}
+
+
+.hero-sup span{
+    font-size: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.hero-inf{
+    margin-top: -220px;
+}
+
+.hcard{
+    color: white;
+    font-size: 'Teko';
+    padding: 0;
+    border-right:1px solid #444;
+    z-index: 9;
+}
+
+.hcard-content{
+    min-height: 300px;
+    background-color: #111;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hcard-content:hover{
+    background-color: #222;
+}
+
+.hcard-heading{
+    font-size: 30px;
+    font-weight: 400;
+    font-family: Teko;
+}
+
+.hcard-separador{
+    height: 5px;
+    width: 50px;
+    background-color: #04e5e5;
+    margin-bottom: 10px;
+}
+
+.hcard-icon{
+    margin-bottom: 20px;
+}
+
+.hcard-img{
+    height: 70px;
+}
+
+.hcard-text{
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 300;
+    color: #c5c5c5;
+    margin-top: 15px;
+}
+
+.continercard{
+    padding: 40px;
+    color: #fff;
+}
+
+
+/* HERO CSS FIM*/
+
+
+/* APRESENTACAO CSS*/
+
+
+.apresentacao{
+   width: 100%;
+   height: 90vh;
+}
+
+.particles{
+    position: absolute;
+    z-index: -99;
+}
+
+.aprecont{
+    position: relative;
+    z-index: 10;
+}
+
+.apr-text{
+    color: white;
+    margin-top: 45%;
+    transform: translateY(-100%);
+}
+
+.apr-text h1{
+    font-size: 80px;
+    line-height: 90px;
+    font-family: Teko;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.apr-text span{
+    font-size: 100px;
+    color: var(--primary);
+}
+
+.text-apr h2{
+    font-size: 100px;
+}
+
+.apr-sec{
+    display: flex;
+}
+
+.apr-sec span{
+    font-size: 50px;
+}
+
+/* APRESENTACAO CSS FIM*/
+
+
+/* SERVIÇOS CSS*/
+
+.servicos{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background: url(../imgs/bg2.jpg);
+}
+
+.serv{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+}
+
+.serv-elem{
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.serv-elem:hover{
+    background-color: #000;
+    box-shadow: 0 28px 60px rgb(4, 229, 229, .1);
+    transform: translateY(-10px);
+}
+
+.serv-icon{
+    margin-bottom: 20px;
+}
+
+.serv-tit{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: Teko;
+    color: #fff;
+}
+
+.serv-separator{
+    height: 5px;
+    width: 50px;
+    background-color: #04e5e5;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.serv-list{
+    padding: 0;
+    margin: 11px 0 0 0;
+}
+
+.ser-elem{
+    list-style: none;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0px;
+}
+
+.ser-elem::before{
+    display: inline-block;
+    content: '';
+    border-radius: 2.5px;
+    height: 5px;
+    width: 5px;
+    margin-right: 10px;
+    background-color:#04e5e5;
+    position: relative;
+    bottom: 2.5px;
+}
+
+.serv-sup{
+    margin-top: -60px;
+}
+
+.tit{
+    position: relative;
+    margin-top: 50px;
+    color: white;
+    width: 100%;
+    height: 220px;
+    font-size: 100px;
+    text-align: center;
+    top: 10px;
+    font-family: Teko;
+}
+
+.servtit2{
+    color: var(--primary);
+}
+/* SERVIÇOS CSS FIM*/
+
+/* DUPLO CSS */
+.duplo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.trabalhos{
+    position: relative;
+    background: black;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.bolhas{
+    z-index: 1;
+    position: relative;
+    display: flex;
+}
+
+.bolhas span{
+    z-index: 1;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--primary);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px var(--primary),
+    0 0 50px var(--primary),
+    0 0 100px var(--primary);  
+    animation: alternativa 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bolhas span:nth-child(even){
+    background: #ceeb2f;
+    box-shadow: 0 0 0 10px #ceeb2f,
+    0 0 50px #ceeb2f,
+    0 0 100px #ceeb2f;  
+}
+
+@keyframes alternativa{
+    0%{
+        transform: translateY(50vh) scale(0);
+    }
+    100%{
+        transform: translateY(-50vh) scale(1);
+    }
+}
+
+
+.bolhascont{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    top: 10px;
+    font-family: Teko;
+}
+
+.bolhascont h1{
+    z-index: 10;
+}
+
+.bolhascont span{
+    z-index: 10;
+    color: var(--primary);
+}
+
+
+.clientes{
+    position: relative;
+    width: 100%;
+    top: 50%;
+    height: 50%;
+    background-color: #050505;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.heading{
+    font-size: 110px;
+    line-height: 100px;
+    font-family: Teko;
+    color: var(--primary);
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.heading span{
+    color: white;
+}
+
+
+.parceiros{
+    text-align: center;
+    padding: 20px 0;
+    border: 0.5px solid rgba(255, 255, 255, .2);
+    border-left: none;
+    border-top: none;
+    transition: .1s;
+}
+
+.parceiros:hover{
+    transform: scale(1.1);
+    background-color: #04e5e5;
+    z-index: 5;
+    border-radius: 10px;
+}
+
+.parc-img{
+    height: 100px;
+}
+/* DUPLO CSS FIM*/
+
+
+/* CONTACT CSS*/
+.contato{
+    background: #000;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.contactcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.heading{
+    font-size: 70px;
+    font-family: Teko;
+    color: #fff;
+}
+
+
+.contactform{
+    height: 501px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    z-index: 5;
+    margin-top: 100px;
+    background: #111;
+}
+
+.contactseparator{
+    height: 5px;
+    width: 50px;
+    background-color: #04e5e5;
+    margin-bottom: 30px;
+    margin-left: 6px;
+}
+
+.inputBox 
+{
+	position: relative;
+	width: 250px;
+}
+.inputBox input 
+{
+	padding: 10px 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	width: 100%;
+	background: #111;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 20px;
+	color: #fff;
+	font-size: 1em;
+	transition: 0.5s;
+}
+
+
+.inputBox textarea 
+{
+	padding: 10px 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	width: 100%;
+	background: #111;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 10px;
+	color: #fff;
+	font-size: 1em;
+	transition: 0.5s;
+}
+
+.inputBox span 
+{
+	position: absolute;
+	left: 0;
+	padding: 10px 10px;
+	pointer-events: none;
+	font-size: 1em;
+	transition: 0.5s;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.45);
+}
+.inputBox input:valid ~ span, 
+.inputBox input:focus ~ span 
+{
+	color: #00dfc4;
+	font-size: 0.65em;
+	transform: translateX(10px) translateY(-7px);
+	padding: 0 5px;
+	background: #1d2b3a;
+	border-left: 1px solid #00dfc4;
+	border-right: 1px solid #00dfc4;
+	letter-spacing: 0.2em;
+}
+.inputBox:nth-child(2) input:valid ~ span, 
+.inputBox:nth-child(2) input:focus ~ span 
+{
+	border-radius: 2px;
+	background: #00dfc4;
+	color: #1d2b3a;
+}
+.inputBox input:valid, 
+.inputBox input:focus 
+{
+	border: 1px solid #00dfc4;
+} 
+
+
+.inputBox textarea:valid ~ span, 
+.inputBox textarea:focus ~ span 
+{
+	color: #00dfc4;
+	font-size: 0.65em;
+	transform: translateX(10px) translateY(-7px);
+	padding: 0 5px;
+	background: #1d2b3a;
+	border-left: 1px solid #00dfc4;
+	border-right: 1px solid #00dfc4;
+	letter-spacing: 0.2em;
+}
+.inputBox:nth-child(2) textarea:valid ~ span, 
+.inputBox:nth-child(2) textarea:focus ~ span 
+{
+	border-radius: 2px;
+	background: #00dfc4;
+	color: #1d2b3a;
+}
+
+
+.botao{
+    display: block;
+    height: 50px;
+    width: 186px;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    transition: .5s;
+    background-color: #000;
+}
+
+.botao:hover{
+    background: #444;
+}
+
+.botao span{
+    position: relative;
+    top: 0;
+    color: #fff;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.mapa{
+    margin-top: 100px;
+}
+
+
+.icons{
+    margin-top: 150px;
+    background: black;
+}
+
+
+.icon-cont{
+    min-height: 250px;
+    background-color: #111;
+    border: 2px solid #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.icon-cont:hover .icon-logo{
+    background-color: #009e9e;
+}
+
+.icon-logo{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    padding: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    position: relative;
+    bottom: 75px;
+    background-color: #04e5e5;
+    border-radius: 150px;
+    transition: .5s;
+}
+
+
+.icon-logo2{
+  width: 50px;
+}
+
+
+.icon-info{
+    position: relative;
+    bottom: 30px;
+}
+
+.icon-tit{
+    font-size: 35px;
+    color: #fff;
+    font-family: Teko;
+    text-align: center;
+}
+
+
+.icon-link{
+    text-align: center;
+}
+
+.linkico{
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.iconsfinal{
+   height: 100px;
+}
+
+
+.footer{
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background: rgba(255,255,255,.1);
+}
+
+.criado{
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 1s;
+}
+
+.criado:hover{
+    letter-spacing: 1px;
+    color: var(--primary);
+}
+/* CONTACT CSS FIM*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS BOTÃO COM ANIMAÇÃO */
+
+
+.ancora{
+    z-index: 95;
+    position: relative;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    width: 130px;
+    height: 20px;
+    transition: 1s;
+    -webkit-box-reflect: below 1px linear-gradient(tranparent, #0004);
+}
+.ancora:hover{
+    background: #04e5e5;
+    box-shadow: 0 0 10px #04e5e5,
+    0 0 30px #04e5e5,
+    0 0 60px #04e5e5,
+    0 0 100px #04e5e5;
+}
+.ancora::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 500%;
+    background: #04e5e5;
+    transition: 1s;
+    animation: animate 2s linear infinite;
+}
+.ancora:hover::before{
+    width: 100%;
+}
+
+.ancora::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #333;
+}
+.ancora:hover::after{
+    background: #333;
+    color: red;
+}
+
+.spanBotao{
+    position: relative;
+    z-index: 91;
+    font-size: 1em;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    color: #04e5e5;
+}
+
+
+.ancora:hover .spanBotao{
+    z-index: 91;
+    letter-spacing: 3px;
+    opacity: 1;
+    color: #04e5e5;
+}
+
+
+.ancora2{
+    z-index: 95;
+    margin-top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    top: 20px;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    width: 500px;
+    height: 120px;
+    transition: 1s;
+    -webkit-box-reflect: below 1px linear-gradient(tranparent, #0004);
+}
+.ancora2:hover{
+    background: #04e5e5;
+    box-shadow: 0 0 10px #04e5e5,
+    0 0 30px #04e5e5,
+    0 0 60px #04e5e5,
+    0 0 100px #04e5e5;
+}
+.ancora2::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 500%;
+    background: #04e5e5;
+    transition: 1s;
+    animation: animate 2s linear infinite;
+}
+.ancora2:hover::before{
+    width: 100%;
+}
+
+.ancora2::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #333;
+}
+.ancora2:hover::after{
+    background: #333;
+    color: red;
+}
+
+.spanBotao2{
+    position: relative;
+    z-index: 91;
+    font-size: .5em;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    color: #04e5e5;
+}
+
+
+.ancora2:hover .spanBotao2{
+    z-index: 91;
+    font-size: .6em;
+    opacity: 1;
+    color: #04e5e5;
+}
+
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{transform: rotate(360deg);}
+}
