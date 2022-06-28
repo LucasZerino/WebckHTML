@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+    background: #000;
 	line-height: 1;
     font-family: 'Poppins', sans-serif;
 }
